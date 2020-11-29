@@ -5,6 +5,10 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 
+const whastAppLink = "https://api.whatsapp.com/send?phone=5528992799949";
+const gitHubLink = "https://github.com/hitaloose";
+const linkedInLink = "https://www.linkedin.com/in/hitaloose/";
+
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
@@ -13,7 +17,41 @@ export default function Home({ allPostsData }) {
       </Head>
 
       <section className={utilStyles.headingMd}>
-        <p>Olá, eu sou Hitalo Loose (hitaloose). Desenvolvedor FullStack</p>
+        <p>Olá, bem vindo ao meu site pessoal.</p>
+        <p>
+          Aqui econtrará formas de falar diretamente comigo, e um pequeno blog
+          de infomações uteis.
+        </p>
+      </section>
+
+      <section className={utilStyles.headingMd}>
+        <h2 className={utilStyles.headingLg}>Contato</h2>
+
+        <ul className={utilStyles.list}>
+          <li className={utilStyles.listItem}>
+            <a href={whastAppLink} target="new">
+              WhatsApp
+            </a>
+            <br />
+            <small className={utilStyles.lightText}>(28) 99279-9949</small>
+          </li>
+
+          <li className={utilStyles.listItem}>
+            <a href={gitHubLink} target="new">
+              GitHub
+            </a>
+            <br />
+            <small className={utilStyles.lightText}>hitaloose</small>
+          </li>
+
+          <li className={utilStyles.listItem}>
+            <a href={linkedInLink} target="new">
+              LinkedIn
+            </a>
+            <br />
+            <small className={utilStyles.lightText}>hitaloose</small>
+          </li>
+        </ul>
       </section>
 
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
